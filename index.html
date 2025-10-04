@@ -3,182 +3,194 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Academic Webpage" />
-  <meta name="author" content="senli1073" />
-  <title id="title"></title>
+  <meta name="description" content="Personal Webpage" />
+  <meta name="author" content="zijingz3" />
+  <title>Zijing Zhao</title>
 
-  <!-- Icon -->
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
 
-  <!-- Bootstrap icons-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Bootstrap icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- Google fonts: 优雅标题 + 清爽正文（含中文） -->
+  <!-- Google Fonts（优雅标题 + 清爽正文字体，含中英） -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@300;400;500&family=Inter:wght@300;400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
 
-  <!-- Core theme CSS (includes Bootstrap)-->
-  <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
-  <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+  <!-- 主题样式 -->
+  <link href="static/css/styles.css" rel="stylesheet" />
+  <link href="static/css/main.css" rel="stylesheet" />
 
-  <!-- 细腻字体样式覆盖 -->
+  <!-- 细腻字体 & 轻量排版（放在主题样式之后，确保覆盖） -->
   <style>
     :root{
-      --font-sans-en: "Inter";
-      --font-sans-zh: "Noto Sans SC";
-      --font-serif-en: "Playfair Display";
-      --font-serif-zh: "Noto Serif SC";
-      --sys-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-                  "PingFang SC","Hiragino Sans GB","Microsoft YaHei", sans-serif;
-      --sys-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
+      --font-title: "Playfair Display", Georgia, "Times New Roman", serif;
+      --font-body:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+                    "PingFang SC","Hiragino Sans GB","Microsoft YaHei", sans-serif;
+      --mint-1:#e9fff7;
+      --mint-2:#d6fbf2;
     }
+
     html, body{
-      font-family: var(--font-sans-en), var(--font-sans-zh), var(--sys-sans);
+      font-family: var(--font-body);
       font-weight: 300;
-      line-height: 1.8;
+      line-height: 1.85;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
     }
-    h1, h2, h3, .font-alt, section header h2 {
-      font-family: var(--font-serif-en), var(--font-serif-zh), var(--sys-serif) !important;
+    h1,h2,h3,.font-alt, section header h2{
+      font-family: var(--font-title) !important;
       font-weight: 600;
-      letter-spacing: 0.2px;
+      letter-spacing: .2px;
     }
-    .top-section .display-3 { font-weight: 600; }
-    .navbar-brand, .nav-link, .btn, a { font-weight: 400; letter-spacing: .1px; }
-    section .main-body{ font-weight: 300; font-size: 1.08rem; line-height: 1.9; }
+
+    /* 版头/版块背景的薄荷渐变 */
+    .bg-gradient-primary-to-secondary-light{
+      background: linear-gradient(180deg, var(--mint-1), #ffffff);
+    }
+    .bg-gradient-primary-to-secondary-gray{
+      background: linear-gradient(180deg, var(--mint-2), var(--mint-1));
+    }
+
+    /* 让标题更秀气一点 */
+    section header h2{
+      font-size: 2.2rem;
+      margin-bottom: .75rem;
+    }
+    section .main-body{
+      font-size: 1.08rem;
+      font-weight: 300;
+      line-height: 1.9;
+    }
+
+    /* 顶部大字 */
+    .top-section .display-3{
+      font-weight: 600;
+    }
   </style>
 
-  <!-- Bootstrap core JS-->
-  <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JS -->
+  <script src="static/js/bootstrap.bundle.min.js"></script>
 
-  <!-- For Compatibility -->
+  <!-- Polyfill（兼容性） -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-  <!-- Markdown -->
-  <script type="text/javascript" src="static/js/marked.min.js"></script>
-
-  <!-- MathJax -->
+  <!-- 数学公式（如不需要可删除） -->
   <script>
     MathJax = {
       tex: {
         packages: {},
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: false,
         processEnvironments: true,
-        processRefs: true,
-        digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
-        tags: 'all',
-        tagSide: 'right',
-        tagIndent: '0.8em',
-        useLabelIds: true,
-        maxMacros: 10000,
-        maxBuffer: 5 * 1024,
-        formatError: (jax, err) => jax.formatError(err)
+        processRefs: true
       }
     };
   </script>
   <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-  <script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  <!-- Core JS (你项目的脚本，会填充各 section 内容) -->
-  <script type="text/javascript" src="static/js/scripts.js"></script>
-  <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
 </head>
 
 <body id="page-top">
-  <!-- Navigation-->
+  <!-- 顶部导航 -->
   <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
     <div class="container px-5">
-      <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
+      <a class="navbar-brand fw-bold" href="#page-top">Zijing Zhao</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
               aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         MENU <i class="bi-list"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-          <li class="nav-item"><a class="nav-link me-lg-3" href="#page-top">HOME</a></li>
-          <!-- 保持锚点 #publications，不改 ID，只改显示文本 -->
-          <li class="nav-item"><a class="nav-link me-lg-3" href="#publications">HOBBIES</a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#home">HOME</a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#hobbies">HOBBIES</a></li>
           <li class="nav-item"><a class="nav-link me-lg-3" href="#awards">AWARDS</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Top Section -->
+  <!-- 顶部横幅 -->
   <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
     <div class="top-section-content">
       <div class="container px-5">
-        <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
+        <h2 class="text-white display-3 lh-1 font-alt">Computer Science</h2>
       </div>
     </div>
   </section>
 
-  <!-- Photo -->
+  <!-- 头像 -->
   <div class="container px-5">
     <div id="avatar">
       <img class="shadow" src="static/assets/img/photo.png" alt="avatar">
     </div>
   </div>
 
-  <!-- Home -->
+  <!-- HOME -->
   <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
     <div class="container px-5">
-      <header><h2 id="home-subtitle"></h2></header>
+      <header><h2><i class="bi bi-mortarboard-fill"></i>&nbsp;Education</h2></header>
       <div class="main-body" id="home-md"></div>
     </div>
   </section>
 
-  <!-- Publications（显示名改成 HOBBIES，但 ID 保持不变） -->
-  <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
+  <!-- HOBBIES -->
+  <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="hobbies">
     <div class="container px-5">
-      <header>
-        <!-- 仍然使用 publications-subtitle，防止脚本找不到 -->
-        <h2 id="publications-subtitle">
-          <i class="bi bi-emoji-smile"></i>&nbsp;HOBBIES
-        </h2>
-      </header>
-      <!-- 内容容器同样保持 publications-md -->
-      <div class="main-body" id="publications-md"></div>
+      <header><h2><i class="bi bi-emoji-smile"></i>&nbsp;HOBBIES</h2></header>
+      <div class="main-body" id="hobbies-md"></div>
     </div>
   </section>
 
-  <!-- Awards -->
+  <!-- AWARDS -->
   <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
     <div class="container px-5">
-      <header><h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS</h2></header>
+      <header><h2><i class="bi bi-award-fill"></i>&nbsp;AWARDS</h2></header>
       <div class="main-body" id="awards-md"></div>
     </div>
   </section>
 
-  <!-- Footer-->
+  <!-- 页脚 -->
   <footer class="bg-bottom text-center py-5">
     <div class="container px-5">
       <div class="text-white-50 small">
-        <div id="copyright-text" class="mb-2"></div>
-        <a id="github-link" href="https://github.com/senli1073">Github</a>
+        <div class="mb-2">&copy; <span id="year"></span> Zijing Zhao</div>
+        <a href="https://github.com/zijingz3">Github</a>
         <span class="mx-1">&middot;</span>
-        <a id="license-link" href="https://github.com/senli1073/senli1073.github.io/blob/main/LICENSE">License</a>
+        <a href="LICENSE">License</a>
       </div>
     </div>
   </footer>
 
-  <!-- 👇 覆盖脚本：在模板脚本之后执行，强制把“Publications”显示为“HOBBIES” -->
+  <!-- ========== 仅此一段：用 Marked.js 加载 Markdown 到页面 ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      // 改标题
-      const titleEl = document.getElementById('publications-subtitle');
-      if (titleEl) {
-        titleEl.innerHTML = '<i class="bi bi-emoji-smile"></i>&nbsp;HOBBIES';
+    // 简单的通用加载函数
+    async function loadMD(containerId, mdPath) {
+      try {
+        const res  = await fetch(mdPath, { cache: "no-store" });
+        if (!res.ok) throw new Error(res.status + " " + res.statusText);
+        const text = await res.text();
+        const el   = document.getElementById(containerId);
+        el.innerHTML = marked.parse(text);
+      } catch (err) {
+        console.error("Failed to load:", mdPath, err);
+        const el = document.getElementById(containerId);
+        if (el) el.innerHTML = "<p style='color:#c00'>Failed to load " + mdPath + "</p>";
       }
-      // 改导航项（href = #publications）
-      const navLink = [...document.querySelectorAll('a.nav-link')]
-        .find(a => a.getAttribute('href') === '#publications');
-      if (navLink) navLink.textContent = 'HOBBIES';
+    }
+
+    // 页面就绪后加载三个 md
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      loadMD("home-md",    "contents/home.md");
+      loadMD("hobbies-md", "contents/hobbies.md");   // ← 关键：加载 hobbies.md
+      loadMD("awards-md",  "contents/awards.md");
     });
   </script>
+  <!-- =========================================================== -->
+
+  <!-- 说明：不再引用旧的 scripts.js / js-yaml，以免继续查找 publications.md
+       若以后需要它们，再按需恢复。 -->
 </body>
 </html>
