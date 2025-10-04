@@ -1,5 +1,3 @@
-#### Hobbies
-
 - 📷 Photography | Nikon true-to-life color; street shots, occasional portraits
 - ☕️ Coffee | Pour-over nerd
 - 🏊 Open-water swimming | Completed 2025 Spuyten Duyvil 10K
