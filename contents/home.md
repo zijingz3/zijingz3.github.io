@@ -7,6 +7,7 @@ She is currently a quant developer at London Stock Exchange Group, New York Offi
 #### Contact
 
 Email: zz2934@columbia.edu
+
 Book Mock Interview with Me: https://calendly.com/zz2934-columbia/career-development-office-hour-zijing-zhao
 
 #### Education
