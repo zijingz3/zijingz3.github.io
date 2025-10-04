@@ -1,17 +1,27 @@
 
 
-[![senli1073](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/senli1073)
+[![zijingz3](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/senli1073)
 
-He is currently a Fellow in the Department of Earth and Planetary Sciences (EPS) at Harvard University.
+She is currently a quant developer at London Stock Exchange Group, New York Office.
 
 #### Contact
 
-Email: senli[at]fas.harvard.edu
+Email: zz2934@columbia.edu
 
 #### Education
-M.E., Computer Science and Technology, China University of Mining and Technology, 2022—2025.\
-B.E., Data Science and Big Data Technology, China University of Mining and Technology, 2018—2022.
+M.A., Mathematics of Finance, Columbia University, 2023—2025.\
+B.S., Mathematical Economics and Finance, Xi'an Jiaotong University, 2019—2023.
 
-#### Research Interests
-Deep Learning, Artificial Intelligence Seismology, Mine Microseismic.
+#### Hobbies
+
+- 📷 Photography | Nikon true-to-life color; street shots, occasional portraits
+- ☕️ Coffee | Pour-over nerd
+- 🏊 Open-water swimming | Completed 2025 Spuyten Duyvil 10K
+- 🍳 Cooking | Skills too dangerous for home use—so I mostly dine out
+- 🎬 Film | Wong Kar-wai vibes over plot; atmosphere > exposition
+- 🧪 Fragrance | Favorite two: Chanel Chance fresh & Jo Malone myrrh tonka
+- 🍳 Cooking | Too good for my own waistline—so I hold back. Can make: guobaorou (crispy sweet–sour pork), liufeichang (braised pork intestines), French red-wine short ribs, and Taiwanese pineapple cakes—**all from scratch**
+- 🎤 Singing | Bel canto; former campus musical lead
+
+
 

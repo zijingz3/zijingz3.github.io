@@ -1,112 +1,122 @@
 @import "./styles.css";
 
 
-:root{
-    --h-title-color:#3948d2;
+/* ===== Mint Theme (薄荷绿) ===== */
+:root {
+  /* 薄荷绿主色系 */
+  --mint-50:  #eafff7;
+  --mint-100: #d3fff3;
+  --mint-200: #b6fff0;
+  --mint-300: #99f6e4;
+  --mint-400: #5eead4;
+  --mint-500: #2dd4bf; /* 主色 */
+  --mint-600: #10b981; /* 深一点（hover/active） */
+
+  /* 主题变量 */
+  --h-title-color: var(--mint-500);
+  --bs-blue:       var(--mint-500);   /* 覆盖供 .header 使用 */
 }
 
+/* 头部 */
 .header {
-    border-bottom: solid 2px var(--bs-blue);
-    z-index: 10000;
+  border-bottom: solid 2px var(--bs-blue);
+  z-index: 10000;
 }
 
+/* 色块条带 */
 .bg-bottom {
-    background-color: var(--h-title-color);
+  background-color: var(--h-title-color);
 }
 
+/* 顶部大图/横幅 */
 .top-section {
-    position: relative;
-    padding: 10rem 0;
-    background-position: center;
-    background-size: cover;
-    height: 25rem;
+  position: relative;
+  padding: 10rem 0;
+  background-position: center;
+  background-size: cover;
+  height: 25rem;
 }
-
 .top-section h2 {
-    font-weight: 400;
+  font-weight: 400;
 }
-
 .top-section .top-section-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
-
 .top-section:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* 保留暗化蒙层，突出文字 */
 }
 
-section header h2{
-    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-    color: var(--h-title-color);
-    font-size: 2.3rem;
-    line-height: 4rem;
+/* 分区标题与正文 */
+section header h2 {
+  font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji" !important;
+  color: var(--h-title-color);
+  font-size: 2.3rem;
+  line-height: 4rem;
+}
+section .main-body {
+  font-size: 1.3rem;
+  font-weight: 200;
+  line-height: 2.4rem;
 }
 
-section .main-body{
-    font-size: 1.3rem;
-    font-weight: 200;
-    line-height: 2.4rem;
-}
-
-
+/* 渐变背景（薄荷绿系） */
 .bg-gradient-primary-to-secondary-light {
-    background: linear-gradient(45deg, #fcfcfc, #ffffff) !important;
+  background: linear-gradient(45deg, var(--mint-50), var(--mint-100)) !important;
 }
-
 .bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #f0f0f0, #f1f1f1) !important;
+  background: linear-gradient(45deg, var(--mint-100), var(--mint-300)) !important;
 }
 
-
-
+/* 层级控制 */
 .on-top {
-    position: relative;
-    z-index: 10000;
+  position: relative;
+  z-index: 10000;
 }
 
+/* 顶部图背景容器 */
 .top-bg {
-    background-position: center;
-    background-size: fill;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
-
 .top-bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-
+/* 头像区域 */
 #avatar {
-    position: relative;
-    height: 0;
-    top:min(-65px,max(-100px,calc(-1*100vw/12)));
-    max-width: 55em;
-    margin: 0 1.5rem 0 0;
-    float: right;
-    z-index: 9000;
+  position: relative;
+  height: 0;
+  top: min(-65px, max(-100px, calc(-1 * 100vw / 12)));
+  max-width: 55em;
+  margin: 0 1.5rem 0 0;
+  float: right;
+  z-index: 9000;
 }
-
 #avatar img {
-    height: max(130px,min(200px,calc(100vw/6)));
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  height: max(130px, min(200px, calc(100vw / 6)));
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
-
 @media screen and (max-width: 991px) {
-    #avatar {
-        margin: 0;
-    }
+  #avatar {
+    margin: 0;
+  }
 }
 
-
+/* 可选：链接/按钮用薄荷绿（如果你有相关类，可直接复用变量）
+a, .link, .btn-link { color: var(--mint-500); }
+a:hover, .link:hover { color: var(--mint-600); }
+.btn-mint { background: var(--mint-500); color: #fff; }
+.btn-mint:hover { background: var(--mint-600); }
+*/
