@@ -104,7 +104,7 @@
         <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
           <li class="nav-item"><a class="nav-link me-lg-3" href="#home">HOME</a></li>
           <li class="nav-item"><a class="nav-link me-lg-3" href="#hobbies">HOBBIES</a></li>
-          <li class="nav-item"><a class="nav-link me-lg-3" href="#awards">AWARDS</a></li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="#projects">PROJECTS</a></li>
         </ul>
       </div>
     </div>
@@ -114,7 +114,7 @@
   <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
     <div class="top-section-content">
       <div class="container px-5">
-        <h2 class="text-white display-3 lh-1 font-alt">Computer Science</h2>
+        <h2 class="text-white display-3 lh-1 font-alt"></h2>
       </div>
     </div>
   </section>
@@ -142,11 +142,11 @@
     </div>
   </section>
 
-  <!-- AWARDS -->
-  <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
+  <!-- PROJECTS -->
+  <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="projects">
     <div class="container px-5">
-      <header><h2><i class="bi bi-award-fill"></i>&nbsp;AWARDS</h2></header>
-      <div class="main-body" id="awards-md"></div>
+      <header><h2><i class="bi bi-project-fill"></i>&nbsp;PROJECTS</h2></header>
+      <div class="main-body" id="projects-md"></div>
     </div>
   </section>
 
@@ -185,7 +185,7 @@
       document.getElementById("year").textContent = new Date().getFullYear();
       loadMD("home-md",    "contents/home.md");
       loadMD("hobbies-md", "contents/hobbies.md");   // ← 关键：加载 hobbies.md
-      //loadMD("awards-md",  "contents/awards.md");
+      loadMD("projects-md",  "contents/projects.md");
     });
   </script>
   <!-- =========================================================== -->
