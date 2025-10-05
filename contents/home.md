@@ -1,5 +1,5 @@
 
-I am currently a quant developer at London Stock Exchange Group, New York Office.
+I am currently a Quant Developer at London Stock Exchange Group, New York Office.
 
 #### Contact
 
